@@ -66,7 +66,7 @@
                             <td><?php echo $types; ?></td>
                             <td>
                                 <div class="btnGroup">
-                                    <button class="btnEdit"><i class="bi bi-pencil-square"></i> Edit</button>|
+                                    <button class="btnEdit" id="onEdit"><i class="bi bi-pencil-square"></i> Edit</button>|
                                     <button class="btnDelete"><i class="bi bi-trash"></i> Delete</button>
                                 </div>
                             </td>
@@ -78,39 +78,14 @@
     </div>
     <!-- end content app -->
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="header">
-                <h3 style="text-align: center;margin:10px 0;color:#868e96;">Add Images</h3>
-            </div>
-            <hr>
-            <div class="body">
-                <div class="form-control">
-                    <form action="addPictures.php" method="post" enctype="multipart/form-data">
-                        <div class="input_form">
-                            <label for="img">Image</label>
-                            <img src="./assets/images/img.png" id="img">
-                            <input type="file" id="files" name="anyfile">
-                        </div>
-                        <hr>
-                        <div class="footer">
-                            <div class="btnGroup" style="float: right;">
-                                <button type="submit" name="btnSubmit">Save</button>
-                                <a href="./pictures.php">Cancel</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <!-- Modal Add,Edit,Delete-->
+    <?php
+        include "./addImages.php";
+        include "./editPictures.php";
+    ?>
     <!-- End Modal -->
 </body>
 <script src="./assets/js/scripts.js"></script>
-<script src="./assets/js/modal_scripts.js"></script>
+<script src="./assets/js/modal_script.js"></script>
 
 </html>
